@@ -1,9 +1,6 @@
 package qa.guru.allure;
 
 import com.codeborne.selenide.Condition;
-import com.codeborne.selenide.logevents.SelenideLogger;
-
-import io.qameta.allure.selenide.AllureSelenide;
 import org.junit.jupiter.api.Test;
 
 import static com.codeborne.selenide.Selenide.$;
@@ -16,7 +13,6 @@ public class StepsTest extends TestBase {
 
     @Test
     public void testLambdaStep() {
-        SelenideLogger.addListener("allure", new AllureSelenide());
 
         step("Открываем страницу репозиториев пользователя", () -> {
             open("https://github.com/Nurchik3009?tab=repositories");
